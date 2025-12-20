@@ -18,50 +18,37 @@ export function Navbar({ activeSection }) {
   const tabs = [
     {
       id: "hero",
-      label: "H",
+      label: "Home",
       icon: (
         <CultIcon
           className={`h-6 w-6 ${
-            activeSection === "hero" ? "text-orange-100" : "text-neutral-100/60"
+            activeSection === "hero" ? "text-white" : "text-gray-400"
           }`}
         />
       ),
     },
     {
       id: "feature",
-      label: "Code",
+      label: "Mission",
       icon: (
-        <CodeIcon
+        <HeartIcon
           className={`h-6 w-6 ${
             activeSection === "feature"
-              ? "text-orange-200"
-              : "text-neutral-100/60"
-          }`}
-        />
-      ),
-    },
-    {
-      id: "testimonial",
-      label: "Ship",
-      icon: (
-        <RocketIcon
-          className={`h-6 w-6 ${
-            activeSection === "testimonial"
-              ? "text-orange-300"
-              : "text-neutral-100/60"
+              ? "text-white"
+              : "text-gray-400"
           }`}
         />
       ),
     },
     {
       id: "price",
-      label: "start",
+      label: "Give",
       icon: (
         <DollarIcon
           className={`h-6 w-6 ${
             activeSection === "price"
-              ? "text-orange-400"
-              : "text-neutral-100/60"
+              ? "text-white"
+              : "text-gray-400"
           }`}
         />
       ),
@@ -69,7 +56,7 @@ export function Navbar({ activeSection }) {
   ]
 
   return (
-    <div className="flex space-x-4 sticky top-0 z-50 bg-black/60 px-1 py-[3px] rounded-full border border-black">
+    <div className="flex space-x-4 sticky top-0 z-50 bg-white/90 backdrop-blur-md px-1 py-[3px] rounded-full border-2 border-orange-200 shadow-lg">
       <ul className="flex w-full justify-between">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id || activeSection === tab.id
@@ -84,7 +71,7 @@ export function Navbar({ activeSection }) {
               {isActive && (
                 <motion.div
                   layoutId="highlight"
-                  className="absolute inset-0 bg-black mix-blend-difference"
+                  className="absolute inset-0 bg-orange-600"
                   style={{ borderRadius: 9999 }}
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
@@ -118,7 +105,7 @@ function CultIcon(props) {
     </svg>
   )
 }
-function RocketIcon(props) {
+function HeartIcon(props) {
   return (
     <svg
       width="24"
@@ -129,15 +116,16 @@ function RocketIcon(props) {
       {...props}
     >
       <path
-        d="M12 14.9998L9 11.9998M12 14.9998C13.3968 14.4685 14.7369 13.7985 16 12.9998M12 14.9998V19.9998C12 19.9998 15.03 19.4498 16 17.9998C17.08 16.3798 16 12.9998 16 12.9998M9 11.9998C9.53214 10.6192 10.2022 9.29582 11 8.04976C12.1652 6.18675 13.7876 4.65281 15.713 3.59385C17.6384 2.53489 19.8027 1.98613 22 1.99976C22 4.71976 21.22 9.49976 16 12.9998M9 11.9998H4C4 11.9998 4.55 8.96976 6 7.99976C7.62 6.91976 11 7.99976 11 7.99976M4.5 16.4998C3 17.7598 2.5 21.4998 2.5 21.4998C2.5 21.4998 6.24 20.9998 7.5 19.4998C8.21 18.6598 8.2 17.3698 7.41 16.5898C7.02131 16.2188 6.50929 16.0044 5.97223 15.9878C5.43516 15.9712 4.91088 16.1535 4.5 16.4998Z"
+        d="M20.84 4.61012C20.3292 4.09912 19.7228 3.69376 19.0554 3.41891C18.3879 3.14405 17.6725 3.00488 16.95 3.00488C16.2275 3.00488 15.5121 3.14405 14.8446 3.41891C14.1772 3.69376 13.5708 4.09912 13.06 4.61012L12 5.67012L10.94 4.61012C9.9083 3.57842 8.50903 3.00488 7.05 3.00488C5.59096 3.00488 4.19169 3.57842 3.16 4.61012C2.1283 5.64181 1.55477 7.04108 1.55477 8.50012C1.55477 9.95915 2.1283 11.3584 3.16 12.3901L4.22 13.4501L12 21.2301L19.78 13.4501L20.84 12.3901C21.351 11.8794 21.7563 11.2729 22.0312 10.6055C22.3061 9.93801 22.4452 9.22262 22.4452 8.50012C22.4452 7.77762 22.3061 7.06222 22.0312 6.39476C21.7563 5.7273 21.351 5.12087 20.84 4.61012Z"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
 }
-function CodeIcon(props) {
+function PeopleIcon(props) {
   return (
     <svg
       width="24"
@@ -148,10 +136,11 @@ function CodeIcon(props) {
       {...props}
     >
       <path
-        d="M7 15L10 12L7 9M13 15H17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z"
+        d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
