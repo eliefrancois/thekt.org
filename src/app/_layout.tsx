@@ -100,7 +100,7 @@ export default function LandingPageLayout({
           </div>
         </section>
         {testimonial && (
-          <section id="testimonial" ref={testimonialRef}>
+          <section id="testimonial">
             <div className="block md:h-[1400px] py-9">
               <div className=" px-2">{testimonial}</div>
             </div>

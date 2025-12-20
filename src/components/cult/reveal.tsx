@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react"
 import { motion, useAnimation, useInView } from "framer-motion"
 
 interface RevealAnimationProps {
-  children: JSX.Element
+  children: React.ReactNode
   width?: "fit-content" | "100%"
   delay?: number
   slideTransition?: any // Custom transition for the slide
