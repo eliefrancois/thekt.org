@@ -11,27 +11,29 @@ import { Navbar } from "@/components/navbar"
 let tabs = [
   { id: "hero", label: "Hero" },
   { id: "feature", label: "Feature" },
-  { id: "testimonial", label: "Testimonial" },
   { id: "price", label: "Price" },
 ]
 
 export default function LandingPageLayout({
   hero,
   feature,
-  testimonial,
+  testimonial = null,
   price,
+}: {
+  hero: React.ReactNode
+  feature: React.ReactNode
+  testimonial?: React.ReactNode
+  price: React.ReactNode
 }) {
   const [activeSection, setActiveSection] = useState(tabs[0].id)
 
   const heroRef = useRef(null)
   const featureRef = useRef(null)
-  const testimonialRef = useRef(null)
   const priceRef = useRef(null)
 
   const sectionRefs = {
     hero: heroRef,
     feature: featureRef,
-    testimonial: testimonialRef,
     price: priceRef,
   }
 
@@ -97,14 +99,16 @@ export default function LandingPageLayout({
             <div className="pt-12 ">{feature}</div>
           </div>
         </section>
-        <section id="testimonial" ref={testimonialRef}>
-          <div className="block md:h-[1400px] py-9">
-            <div className=" px-2">{testimonial}</div>
-          </div>
-        </section>
-        <div className="relative h-full bg-black rounded-t-[4rem]">
+        {testimonial && (
+          <section id="testimonial" ref={testimonialRef}>
+            <div className="block md:h-[1400px] py-9">
+              <div className=" px-2">{testimonial}</div>
+            </div>
+          </section>
+        )}
+        <div className="relative h-full bg-gradient-to-b from-white to-orange-50 rounded-t-[4rem]">
           <section id="price" ref={priceRef}>
-            <div className="w-full h-full md:h-[900px]  ">{price}</div>
+            <div className="w-full h-full ">{price}</div>
           </section>
         </div>
         <section className="relative">

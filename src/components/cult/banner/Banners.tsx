@@ -11,6 +11,8 @@ import merc4 from "@/images/projects/Clay-6.png"
 import allyArena1 from "@/images/projects/img-1.png"
 import allyArena2 from "@/images/projects/img-2.png"
 import allyArena3 from "@/images/projects/img-3.png"
+import kerseyHero from "@/images/projects/kersey2.png"
+import kerseyHero2 from "@/images/projects/kersey3.png"
 import {
   motion,
   MotionValue,
@@ -98,18 +100,28 @@ export const useClock = ({
 
 const bannerOneImages = [
   // '/images/projects/ally-arena-1.png',
-  allyArena1,
-  lowes2,
-  merc3,
-  allyArena2,
-  allyMilestone2,
+  // allyArena1,
+  // lowes2,
+  // merc3,
+  // allyArena2,
+  // allyMilestone2,
+  kerseyHero,
+  kerseyHero2,
   // '/images/projects/lowes-2.png',
   // '/images/projects/merc-3.png',
   // '/images/projects/ally-arena-2.png',
   // '/images/projects/ally-milestone-2.png',
 ]
 
-const bannerTwoImages = [allyMilestone, merc4, allyArena1, lowes1, allyArena3]
+const bannerTwoImages = [
+  // allyMilestone,
+  // merc4,
+  // allyArena1,
+  // lowes1,
+  // allyArena3,
+  kerseyHero,
+  kerseyHero2,
+]
 // const bannerTwoImages = [
 //   '/images/projects/ally-milestone.png',
 //   '/images/projects/merc-4.png',
@@ -141,10 +153,10 @@ const Photo = ({ src, onClick }: PhotoProps) => {
           setIsFull((isFull) => !isFull)
         }}
         className={cn(
-          "cursor-pointer  border-8 border-black rounded-xl",
+          "cursor-pointer border-8 border-black rounded-xl",
           isFull
-            ? "h-64 w-auto md:w-[450px] md:h-[300px] object-cover aspect-auto"
-            : "h-64 w-auto md:w-[450px] md:h-[300px]  object-cover aspect-video"
+            ? "h-64 w-auto md:w-[500px] md:h-[350px] object-contain aspect-auto"
+            : "h-64 w-auto md:w-[500px] md:h-[350px] object-contain aspect-video"
         )}
       />
     </CameraTarget>
