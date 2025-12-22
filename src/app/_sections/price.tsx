@@ -5,9 +5,9 @@ import TextAnimate from "@/components/cult/text-animate"
 
 export function Pricing() {
   return (
-    <div className="py-16 md:py-24 bg-gradient-to-b from-orange-50/30 to-white">
-      <div className="container mx-auto px-4">
-        <div className="flex py-9 justify-center items-center flex-col">
+    <div className="py-16 md:py-32 lg:py-40 bg-gradient-to-b from-orange-50/30 to-white">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 max-w-7xl">
+        <div className="flex py-9 md:py-12 justify-center items-center flex-col">
           <TextAnimate
             text="Support Our Mission"
             type="shiftInUp"
@@ -20,9 +20,9 @@ export function Pricing() {
         </div>
 
         {/* Main Donation Section */}
-        <div className="max-w-3xl mx-auto mt-12">
-          <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 md:p-12 shadow-2xl text-white">
-            <div className="text-center space-y-6">
+        <div className="max-w-3xl mx-auto mt-12 md:mt-16">
+          <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl text-white">
+            <div className="text-center space-y-6 md:space-y-8">
               <h3 className="text-3xl md:text-5xl font-black">Make a Donation</h3>
               <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
                 Your generous support helps families fighting childhood leukemia, 
@@ -46,11 +46,11 @@ export function Pricing() {
         </div>
 
         {/* Additional giving options */}
-        <div className="mt-16 text-center">
-          <p className="text-lg text-gray-700 mb-6 font-semibold">
+        <div className="mt-16 md:mt-24 text-center">
+          <p className="text-lg md:text-xl text-gray-700 mb-6 md:mb-8 font-semibold">
             Other ways to support the KT Foundation
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             <button className="px-6 py-3 bg-white border-2 border-orange-600 text-orange-600 font-semibold rounded-full hover:bg-orange-50 transition-colors shadow-md">
               Corporate Matching
             </button>

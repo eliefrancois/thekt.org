@@ -14,8 +14,8 @@ export function Hero() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-orange-50 via-white to-orange-50/30 -z-10" />
       
-      <div className="container mx-auto px-4 md:px-8 py-12 md:py-0">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-0 max-w-7xl">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
           {/* Left side - Text content */}
           <div className="order-2 md:order-1 space-y-6 md:space-y-8">
             <FadeIn>
@@ -97,23 +97,23 @@ export function Hero() {
         </div>
 
         {/* Stats section */}
-        <div className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+        <div className="mt-16 md:mt-32 mb-16 md:mb-24 lg:mb-32 grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           <FadeIn>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <p className="text-4xl md:text-5xl font-black text-orange-600">1 in 3</p>
-              <p className="text-sm md:text-base text-gray-600 mt-2">People affected by cancer</p>
+            <div className="text-center p-8 md:p-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-4xl md:text-5xl lg:text-6xl font-black text-orange-600">1 in 3</p>
+              <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-3">People affected by cancer</p>
             </div>
           </FadeIn>
           <FadeIn>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <p className="text-4xl md:text-5xl font-black text-orange-600">6,000+</p>
-              <p className="text-sm md:text-base text-gray-600 mt-2">Children diagnosed with ALL yearly</p>
+            <div className="text-center p-8 md:p-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-4xl md:text-5xl lg:text-6xl font-black text-orange-600">6,000+</p>
+              <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-3">Children diagnosed with ALL yearly</p>
             </div>
           </FadeIn>
           <FadeIn>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <p className="text-4xl md:text-5xl font-black text-orange-600">90%</p>
-              <p className="text-sm md:text-base text-gray-600 mt-2">Survival rate with early detection</p>
+            <div className="text-center p-8 md:p-10 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-4xl md:text-5xl lg:text-6xl font-black text-orange-600">90%</p>
+              <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-3">Survival rate with early detection</p>
             </div>
           </FadeIn>
         </div>

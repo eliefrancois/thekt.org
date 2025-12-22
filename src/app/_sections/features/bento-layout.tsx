@@ -31,13 +31,13 @@ import {
 export function BentoLayout() {
   return (
     <>
-      <div className="pt-24 pb-6 flex flex-col items-center justify-center">
+      <div className="pt-24 md:pt-32 pb-6 md:pb-12 flex flex-col items-center justify-center">
         <TextAnimate
-          className="font-black pb-6 text-3xl md:text-5xl text-center"
+          className="font-black pb-6 md:pb-8 text-3xl md:text-5xl lg:text-6xl text-center"
           text="Our Mission"
           type="shiftInUp"
         />
-        <p className="max-w-md md:max-w-2xl text-center text-lg md:text-xl px-4">
+        <p className="max-w-md md:max-w-2xl lg:max-w-3xl text-center text-lg md:text-xl lg:text-2xl px-4">
           <Balancer>
             The KT Foundation is dedicated to{" "}
             <span className="bg-orange-100 font-bold px-2 rounded-sm">
@@ -55,9 +55,9 @@ export function BentoLayout() {
           </Balancer>
         </p>
       </div>
-      <div className="py-12 max-w-6xl mx-auto">
-        <div className="py-12 rounded-3xl px-2">
-          <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+      <div className="py-12 md:py-16 max-w-6xl mx-auto">
+        <div className="py-12 md:py-16 rounded-3xl px-2 md:px-4">
+          <BentoGrid className="max-w-4xl lg:max-w-5xl mx-auto md:auto-rows-[20rem]">
             <BentoImageCard
               text="About ALL"
               image={imageCard}

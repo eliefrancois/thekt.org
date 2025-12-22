@@ -11,10 +11,10 @@ import { OurWorkBanner } from "./features/our-work"
 
 export function Projects() {
   return (
-    <div className="py-16 md:py-24 bg-gradient-to-b from-white to-orange-50/30">
-      <div className="container mx-auto px-4">
+    <div className="pt-24 md:pt-40 lg:pt-48 pb-16 md:pb-32 lg:pb-40 bg-gradient-to-b from-white to-orange-50/30">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 max-w-7xl">
         <div className="flex flex-col items-center justify-center">
-          <div className="mx-auto max-w-lg md:max-w-4xl text-center">
+          <div className="mx-auto max-w-lg md:max-w-4xl lg:max-w-5xl text-center">
             <div className="space-y-4">
               <h2 className="font-bold tracking-tight text-black text-4xl md:text-5xl lg:text-7xl">
                 Remembering{" "}
@@ -28,8 +28,8 @@ export function Projects() {
             </div>
 
             <RevealAnimation>
-              <div className="mt-8 px-6 space-y-6">
-                <p className="text-lg md:text-xl leading-relaxed text-gray-700">
+              <div className="mt-8 md:mt-12 px-6 space-y-6 md:space-y-8">
+                <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-700">
                   <Balancer>
                     Kersey Thermidor was more than a son, brother, and friend. He was a 
                     beacon of hope, courage, and resilience. Kersey 
@@ -55,15 +55,17 @@ export function Projects() {
         </div>
 
         {/* Kersey's Video */}
-        <div className="mt-16">
+        <div className="mt-16 md:mt-24 lg:mt-32">
           <KerseyVideo />
         </div>
 
-        <div className="pt-16">
+        <div className="pt-16 md:pt-24 lg:pt-32">
           <OurWorkBanner />
         </div>
 
-        <BentoLayout />
+        <div className="mt-8 md:mt-12">
+          <BentoLayout />
+        </div>
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ import TextAnimate from "./cult/text-animate"
 
 export function FAQ() {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-20 bg-transparent rounded-t-[48px]">
+    <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-16 py-24 md:py-32 lg:py-40 bg-transparent rounded-t-[48px]">
       <div className="py-12">
         <TextAnimate
           text="Frequently Asked "
@@ -112,9 +112,9 @@ export function FAQ() {
       </div>
 
       {/* Contact section */}
-      <div className="mt-16 text-center">
-        <p className="text-lg text-gray-700 mb-4">Still have questions?</p>
-        <button className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg">
+      <div className="mt-16 md:mt-24 text-center">
+        <p className="text-lg md:text-xl text-gray-700 mb-6">Still have questions?</p>
+        <button className="px-10 py-5 bg-orange-600 hover:bg-orange-700 text-white font-bold text-lg rounded-full transition-all transform hover:scale-105 shadow-lg">
           Contact Us
         </button>
       </div>
