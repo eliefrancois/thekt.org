@@ -1,6 +1,8 @@
 "use client"
 
 import { useCallback, useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHandsPraying } from "@fortawesome/free-solid-svg-icons"
 import { motion } from "framer-motion"
 
 export function Navbar({ activeSection }) {
@@ -44,8 +46,9 @@ export function Navbar({ activeSection }) {
       id: "price",
       label: "Give",
       icon: (
-        <PrayingHandsIcon
-          className={`h-6 w-6 ${
+        <FontAwesomeIcon
+          icon={faHandsPraying}
+          className={`h-5 w-5 ${
             activeSection === "price"
               ? "text-white"
               : "text-gray-400"
@@ -139,26 +142,6 @@ function PeopleIcon(props) {
         d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z"
         stroke="currentColor"
         strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-function PrayingHandsIcon(props) {
-  return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <path
-        d="M12 2L13 7L14.5 4L15.5 7.5L17 5L18 8.5L19 7L19.5 10L20 9L20 12C20 13 19.5 14 18.5 14.5L13 17V22M12 2L11 7L9.5 4L8.5 7.5L7 5L6 8.5L5 7L4.5 10L4 9L4 12C4 13 4.5 14 5.5 14.5L11 17V22M12 2V22"
-        stroke="currentColor"
-        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
