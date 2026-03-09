@@ -44,7 +44,7 @@ export function Navbar({ activeSection }) {
       id: "price",
       label: "Give",
       icon: (
-        <DollarIcon
+        <PrayingHandsIcon
           className={`h-6 w-6 ${
             activeSection === "price"
               ? "text-white"
@@ -145,7 +145,7 @@ function PeopleIcon(props) {
     </svg>
   )
 }
-function DollarIcon(props) {
+function PrayingHandsIcon(props) {
   return (
     <svg
       width="24"
@@ -156,10 +156,11 @@ function DollarIcon(props) {
       {...props}
     >
       <path
-        d="M6 16C6 18.2091 7.79086 20 10 20H14C16.2091 20 18 18.2091 18 16C18 13.7909 16.2091 12 14 12H10C7.79086 12 6 10.2091 6 8C6 5.79086 7.79086 4 10 4H14C16.2091 4 18 5.79086 18 8M12 2V22"
+        d="M12 5.5C12 5.5 10 3 8 3C6 3 4 4.5 4 7C4 9.5 6 11 8 11C8.66667 11 9.5 10.8333 10 10.5M12 5.5C12 5.5 14 3 16 3C18 3 20 4.5 20 7C20 9.5 18 11 16 11C15.3333 11 14.5 10.8333 14 10.5M12 5.5V21M10 10.5C10.5 10.8333 11.5 11 12 11C12.5 11 13.5 10.8333 14 10.5M10 10.5V13.5C10 15.5 9 17.5 7 19M14 10.5V13.5C14 15.5 15 17.5 17 19"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
