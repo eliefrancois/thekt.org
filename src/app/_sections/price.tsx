@@ -29,10 +29,10 @@ export function Pricing() {
                 funds critical research, and raises awareness about ALL.
               </p>
               
-              <div className="pt-6">
+              <div className="pt-6 relative z-10">
                 <button 
                   onClick={() => window.open('https://donate.stripe.com/eVq8wH1L75CPgNk0vl8AE00', '_blank')}
-                  className="px-12 py-5 bg-white text-orange-600 font-bold text-xl rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl cursor-pointer"
+                  className="relative z-20 px-12 py-5 bg-white text-orange-600 font-bold text-xl rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl cursor-pointer"
                 >
                   Donate Now
                 </button>
