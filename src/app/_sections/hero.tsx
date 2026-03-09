@@ -48,10 +48,7 @@ export function Hero() {
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
                   <button 
                     onClick={() => {
-                      const section = document.querySelector('#price');
-                      if (section) {
-                        section.scrollIntoView({ behavior: 'smooth' });
-                      }
+                      window.open('https://donate.stripe.com/eVq8wH1L75CPgNk0vl8AE00', '_blank');
                     }}
                     className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg cursor-pointer"
                   >

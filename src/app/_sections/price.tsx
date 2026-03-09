@@ -30,7 +30,10 @@ export function Pricing() {
               </p>
               
               <div className="pt-6">
-                <button className="px-12 py-5 bg-white text-orange-600 font-bold text-xl rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl">
+                <button 
+                  onClick={() => window.open('https://donate.stripe.com/eVq8wH1L75CPgNk0vl8AE00', '_blank')}
+                  className="px-12 py-5 bg-white text-orange-600 font-bold text-xl rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl cursor-pointer"
+                >
                   Donate Now
                 </button>
               </div>

@@ -4,10 +4,7 @@ import { OrganicButton } from "./cult/organic-button"
 
 export function DonateButton() {
   const handleClick = () => {
-    const section = document.querySelector('#price');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.open('https://donate.stripe.com/eVq8wH1L75CPgNk0vl8AE00', '_blank');
   };
 
   return (
